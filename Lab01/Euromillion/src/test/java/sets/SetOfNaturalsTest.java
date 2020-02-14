@@ -54,12 +54,32 @@ public class SetOfNaturalsTest {
         assertThrows(IllegalArgumentException.class, () -> setA.add(elems));
     }
 
+    @Test
+    public void testSameValues(){
+        setA.add(12);
+        assertThrows(IllegalArgumentException.class, ()-> setA.add(12));
+    }
+
+    @Test
+    public void testArrayWithSameValues(){
+        int[] elems = new int[]{1, 1, 1, 1, 1};
+        assertThrows(IllegalArgumentException.class, ()-> setA.add(elems));
+    }
+
+    @Test
+    public void testNonNaturalNumbers(){
+        int[] elems = new int[]{1, -1, -3, 1/2};
+        assertThrows(IllegalArgumentException.class, ()-> setA.add(elems));
+        assertThrows(IllegalArgumentException.class, ()-> setA.add(1/9));
+    }
 
     @Test
     public void testIntersectForNoIntersection() {
         assertFalse(setA.intersects(setB), "no intersection but was reported as existing");
 
     }
+
+
 
 
 }
