@@ -2,12 +2,12 @@ package stack;
 
 import java.util.Stack;
 
-class TQSSimpeStack implements ITStack {
+class TQSSimpleStack implements ITStack {
 
     private Object[] array;
     private int size = 0;
 
-    public TQSSimpeStack(int stack_size) {
+    public TQSSimpleStack(int stack_size) {
         array = new Object[stack_size];
     }
 
