@@ -12,12 +12,12 @@ class TQSSimpleStackTest {
     private int stack_size = 100;
 
     @BeforeEach
-    private void setUp() {
+    void setUp() {
         s = new TQSSimpleStack(stack_size);
     }
 
     @Test
-    private void pushEmptyStack() {
+    void pushEmptyStack() {
         for (int i =  0; i<10; i++){
             s.push(i);
         }
@@ -26,7 +26,7 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    private void pushFullStack(){
+    void pushFullStack(){
         for (int i = 0; i<100; i++){
             s.push(i);
         }
@@ -34,13 +34,13 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    private void popEmptyStack(){
+    void popEmptyStack(){
         assertTrue(s.isEmpty());
         assertThrows(NoSuchElementException.class, () -> s.pop());
     }
 
     @Test
-    private void pop() {
+    void pop() {
         for (int i = 0; i<=4; i++){
             s.push(i);
         }
@@ -52,19 +52,19 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    private void peek() {
+    void peek() {
         s.push(1);
         assertEquals(s.peek(), 1);
     }
 
     @Test
-    private void size() {
+    void size() {
         s.push(2);
         assertEquals(s.size(), 1);
     }
 
     @Test
-    private void isEmpty() {
+    void isEmpty() {
         assertTrue(s.isEmpty());
         assertEquals(s.size(), 0);
     }
