@@ -9,26 +9,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TQSSimpleStackTest {
     protected ITStack s;
-    private int size = 100;
+    private int stack_size = 100;
+
     @BeforeEach
     void setUp() {
-        s = new TQSSimpleStack(size);
+        s = new TQSSimpleStack(stack_size);
     }
 
     @Test
     void pushEmptyStack() {
         int pushes = 10;
-        for (int i =  0; i<=10; i++){
+        for (int i =  0; i<10; i++){
             s.push(i);
         }
-        assertTrue(s.isEmpty());
+        assertFalse(s.isEmpty());
         assertEquals(s.size(), 10);
     }
 
     @Test
     void pushFullStack(){
         int pushes = 100;
-        for (int i = 0; i<=100; i++){
+        for (int i = 0; i<100; i++){
             s.push(i);
         }
         assertThrows(IndexOutOfBoundsException.class, () -> s.push(1));
@@ -68,6 +69,6 @@ class TQSSimpleStackTest {
     @Test
     void isEmpty() {
         assertTrue(s.isEmpty());
-        assertEquals(s.isEmpty(), 0);
+        assertEquals(s.size(), 0);
     }
 }
