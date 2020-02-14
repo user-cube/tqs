@@ -1,34 +1,33 @@
 package stack;
 
-import java.util.EmptyStackException;
 import java.util.Stack;
 
-class TQSSimpeStack<T> extends Stack<T> {
-    private int maxSize;
+class TQSSimpeStack implements ITStack {
+
     private Object[] array;
-    private int top;
+    private int size = 0;
 
-    public TQSSimpeStack(int maxSize) {
-        this.maxSize = maxSize;
-        this.array = new Object[maxSize];
-        this.top = -1;
+    public TQSSimpeStack(int stack_size) {
+        array = new Object[stack_size];
     }
 
-    public T pop() {
-        if(this.isEmpty())
-            throw new EmptyStackException();
-        return element(top--);
+    public void push(Object item) {
+        return;
     }
 
-    public T peek() {
-        if(this.isEmpty())
-            throw new EmptyStackException();
-        return element(top);
+    public Object pop(){
+        return null;
     }
 
-    // Safe because push(T) is type checked.
-    @SuppressWarnings("unchecked")
-    private T element(int index) {
-        return (T)array[index];
+    public Object peek() {
+        return null;
+    }
+
+    public int size() {
+        return 0;
+    }
+
+    public boolean isEmpty(){
+        return false;
     }
 }
