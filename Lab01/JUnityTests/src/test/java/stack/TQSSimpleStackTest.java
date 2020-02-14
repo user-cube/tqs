@@ -18,7 +18,6 @@ class TQSSimpleStackTest {
 
     @Test
     void pushEmptyStack() {
-        int pushes = 10;
         for (int i =  0; i<10; i++){
             s.push(i);
         }
@@ -28,7 +27,6 @@ class TQSSimpleStackTest {
 
     @Test
     void pushFullStack(){
-        int pushes = 100;
         for (int i = 0; i<100; i++){
             s.push(i);
         }
@@ -43,7 +41,6 @@ class TQSSimpleStackTest {
 
     @Test
     void pop() {
-        int pushes = 4;
         for (int i = 0; i<=4; i++){
             s.push(i);
         }
