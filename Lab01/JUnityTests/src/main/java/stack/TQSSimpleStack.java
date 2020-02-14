@@ -1,7 +1,6 @@
 package stack;
 
 import java.util.NoSuchElementException;
-import java.util.Stack;
 
 class TQSSimpleStack implements ITStack {
 
