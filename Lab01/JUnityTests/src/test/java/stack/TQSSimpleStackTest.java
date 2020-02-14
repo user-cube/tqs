@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class TQSSimpleStackTest {
     protected ITStack s;
@@ -47,7 +50,6 @@ class TQSSimpleStackTest {
         for (int i = 0; i<=3; i++){
             s.pop();
         }
-
         assertEquals(s.peek(), 0);
     }
 
