@@ -13,7 +13,7 @@ class TQSSimpleStack implements ITStack {
 
     public void push(Object item) {
         if (size == array.length) {
-            throw new IndexOutOfBoundsException("Cannot add to full stack");
+            throw new IllegalStateException("Cannot add to full stack");
         }
         array[size++] = item;
     }

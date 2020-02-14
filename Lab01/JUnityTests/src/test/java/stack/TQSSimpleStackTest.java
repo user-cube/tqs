@@ -33,7 +33,7 @@ class TQSSimpleStackTest {
         for (int i = 0; i<100; i++){
             s.push(i);
         }
-        assertThrows(IndexOutOfBoundsException.class, () -> s.push(1));
+        assertThrows(IllegalStateException.class, () -> s.push(1));
     }
 
     @Test
