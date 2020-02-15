@@ -21,7 +21,8 @@ public class EuromillionsDrawTest {
 
     @Test
     public void testFindMatches() {
-        Dip expected, actual;
+        Dip expected;
+        Dip actual;
 
         // test for perfect match on the 3rd dip
         expected = sampleCuppon.getDipByIndex(2);

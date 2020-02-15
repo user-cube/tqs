@@ -9,7 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
 
 /**
  * @author ico0
@@ -47,6 +49,10 @@ public class SetOfNaturalsTest {
         setB.add(11);
         assertTrue(setB.contains(11), "add: added element not found in set.");
         assertEquals(7, setB.size(), "add: elements count not as expected.");
+
+        setD.add(12);
+        assertTrue(setD.contains(12), "add: added element not found in set");
+        assertEquals(7, setD.size(), "add: elements count not as expected.");
     }
 
     @Test

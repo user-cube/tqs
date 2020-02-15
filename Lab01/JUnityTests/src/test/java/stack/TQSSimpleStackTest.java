@@ -10,17 +10,17 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class TQSSimpleStackTest {
+public class TQSSimpleStackTest {
     protected ITStack s;
     private int stack_size = 100;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         s = new TQSSimpleStack(stack_size);
     }
 
     @Test
-    void testPushEmptyStack() {
+    public void testPushEmptyStack() {
         for (int i =  0; i<10; i++){
             s.push(i);
         }
@@ -29,7 +29,7 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    void testPushFullStack(){
+    public void testPushFullStack(){
         for (int i = 0; i<100; i++){
             s.push(i);
         }
@@ -37,7 +37,7 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    void testPopEmptyStack(){
+    public void testPopEmptyStack(){
         assertTrue(s.isEmpty());
         assertThrows(NoSuchElementException.class, () -> s.pop());
     }
@@ -56,7 +56,7 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    void pop() {
+    public void pop() {
         for (int i = 0; i<=4; i++){
             s.push(i);
         }
@@ -67,25 +67,25 @@ class TQSSimpleStackTest {
     }
 
     @Test
-    void testPeek() {
+    public void testPeek() {
         s.push(1);
         assertEquals(s.peek(), 1);
     }
 
     @Test
-    void testPeekEmptyStack(){
+    public void testPeekEmptyStack(){
         assertTrue(s.isEmpty());
         assertThrows(NoSuchElementException.class, ()-> s.peek());
     }
 
     @Test
-    void size() {
+    public void size() {
         s.push(2);
         assertEquals(s.size(), 1);
     }
 
     @Test
-    void isEmpty() {
+    public void isEmpty() {
         assertTrue(s.isEmpty());
         assertEquals(s.size(), 0);
     }
