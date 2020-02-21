@@ -14,10 +14,12 @@ public class IStockMarketTest {
 
     @BeforeEach
     public void setUp(){
-
+        stocksPortfolio = new StocksPortfolio("American Pie");
+        stocksPortfolio.setMarketService(market);
     }
 
     @Test
-    public void getPrice() {
+    public void testTotalValue() {
+
     }
 }
