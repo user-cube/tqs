@@ -11,6 +11,7 @@ TQS labs and notes.
     + [Euromillion](https://github.com/user-cube/tqs/tree/master/Lab01/Euromillion)
   * [Mocking dependencies in unit testing - Mockito](https://github.com/user-cube/tqs/tree/master/Lab02)
     + [Statement](https://github.com/user-cube/tqs/blob/master/Lab02/Enunciado.pdf)
+    + [Stock Market](https://github.com/user-cube/tqs/tree/master/Lab02/StockMarket)
 
 ## Authors
 - [Rui Coelho](https://github.com/user-cube)
