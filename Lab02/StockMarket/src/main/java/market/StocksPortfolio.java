@@ -30,15 +30,10 @@ public class StocksPortfolio {
     }
 
     public double getTotalValue() {
-        Double sum = 0.0;
-        for (Stock stock : this.stocks) {
-            sum += this.marketService.getPrice(stock.getName()) * stock.getQuantity();
-        }
-        return sum;
+        return this.stocks.stream().mapToDouble(s -> marketService.getPrice(s.getName())*s.getQuantity()).sum();
     }
 
     public void addStock(Stock stock) {
         stocks.add(stock);
     }
-
 }
