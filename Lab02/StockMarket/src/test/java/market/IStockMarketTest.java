@@ -5,10 +5,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 @ExtendWith(MockitoExtension.class)
 public class IStockMarketTest {
@@ -24,9 +27,14 @@ public class IStockMarketTest {
 
     @Test
     public void testTotalValue() {
-        when(market.getPrice("EBAY")).thenReturn(41.0);
+        Mockito.when(market.getPrice("EBAY")).thenReturn(41.0);
         Stock ebayStock = new Stock("EBAY", 2);
         stocksPortfolio.addStock(ebayStock);
         assertEquals(82, stocksPortfolio.getTotalValue(), 0.001);
+
+        //Hamcrest
+        assertThat(stocksPortfolio.getTotalValue(),is(82.0));
+
+        Mockito.verify(market, Mockito.times(2)).getPrice(Mockito.anyString());
     }
 }
