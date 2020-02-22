@@ -2,13 +2,8 @@ package market;
 
 public class Stock {
 
-    public String name;
-    public int quantity;
-
-    public Stock(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-    }
+    private String name;
+    private int quantity;
 
     public String getName() {
         return name;
@@ -23,6 +18,11 @@ public class Stock {
     }
 
     public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Stock(String name, int quantity) {
+        this.name = name;
         this.quantity = quantity;
     }
 }
