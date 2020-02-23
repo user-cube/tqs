@@ -12,18 +12,14 @@ import java.util.Formatter;
 import java.util.Locale;
 
 public class AddressResolver {
-    private URIBuilder uriBuilder;
+    private TqsHttpClient httpClient;
 
     public AddressResolver(TqsHttpClient httpClient) {
         this.httpClient = httpClient;
     }
 
-    private TqsHttpClient httpClient;
-
-
     public Address findAddressForLocation(double latitude, double longitude) throws URISyntaxException, IOException, org.json.simple.parser.ParseException {
-
-        uriBuilder = new URIBuilder(
+        URIBuilder uriBuilder = new URIBuilder(
                 "http://open.mapquestapi.com/geocoding/v1/reverse?key=uXSAVwYWbf9tJmsjEGHKKAo0gOjZfBLQ");
         uriBuilder.addParameter("location",
                 (new Formatter()).format(Locale.US,
