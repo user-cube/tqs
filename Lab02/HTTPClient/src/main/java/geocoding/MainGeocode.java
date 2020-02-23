@@ -1,6 +1,6 @@
 package geocoding;
 
-import connection.TqsBasicHttpClient;
+import connection.TqsHttpClient;
 import org.apache.http.ParseException;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class MainGeocode {
      */
     public static void main(String[] args) {
         try {
-            AddressResolver resolver = new AddressResolver(new TqsBasicHttpClient());
+            AddressResolver resolver = new AddressResolver(new TqsHttpClient());
 
             Address result = resolver.findAddressForLocation(40.6406609, -8.6566883);
 
@@ -30,6 +30,8 @@ public class MainGeocode {
             Logger.getLogger(MainGeocode.class.getName()).log(Level.SEVERE, null, ex);
         } catch (org.json.simple.parser.ParseException ex) {
             Logger.getLogger(MainGeocode.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (java.text.ParseException e) {
+            e.printStackTrace();
         }
     }
 

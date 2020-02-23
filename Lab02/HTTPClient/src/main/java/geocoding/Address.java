@@ -3,8 +3,20 @@ package geocoding;
 import java.util.Objects;
 
 public class Address {
-
     private String road;
+    private String city;
+    private String state;
+    private String zip;
+    private String houseNumber;
+
+    public Address(String houseNumber, String road, String city, String state, String zip) {
+        this.houseNumber = houseNumber;
+        this.road = road;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
 
     public String getRoad() {
         return road;
@@ -14,17 +26,13 @@ public class Address {
         this.road = road;
     }
 
-    private String cirty;
-
-    public String getCirty() {
-        return cirty;
+    public String getCity() {
+        return city;
     }
 
-    public void setCirty(String cirty) {
-        this.cirty = cirty;
+    public void setCity(String city) {
+        this.city = city;
     }
-
-    private String state;
 
     public String getState() {
         return state;
@@ -34,84 +42,40 @@ public class Address {
         this.state = state;
     }
 
-    public Address(String road, String cirty, String state, String zio, String houseNumber) {
-        this.road = road;
-        this.cirty = cirty;
-        this.state = state;
-        this.zio = zio;
-        this.houseNumber = houseNumber;
+    public String getZip() {
+        return zip;
     }
 
-    private String zio;
-
-    public String getZio() {
-        return zio;
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
-    public void setZio(String zio) {
-        this.zio = zio;
-    }
-
-    private String houseNumber;
-
-    /**
-     * Get the value of houseNumber
-     *
-     * @return the value of houseNumber
-     */
     public String getHouseNumber() {
         return houseNumber;
     }
 
-    /**
-     * Set the value of houseNumber
-     *
-     * @param houseNumber new value of houseNumber
-     */
     public void setHouseNumber(String houseNumber) {
         this.houseNumber = houseNumber;
     }
 
     @Override
-    public String toString() {
-        return "Address{" + "road=" + road + ", cirty=" + cirty + ", state=" + state + ", zio=" + zio + ", houseNumber=" + houseNumber + '}';
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Address address = (Address) o;
+        return Objects.equals(road, address.road) &&
+                Objects.equals(city, address.city) &&
+                Objects.equals(state, address.state) &&
+                Objects.equals(zip, address.zip) &&
+                Objects.equals(houseNumber, address.houseNumber);
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        return hash;
+        return Objects.hash(road, city, state, zip, houseNumber);
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Address other = (Address) obj;
-        if (!Objects.equals(this.road, other.road)) {
-            return false;
-        }
-        if (!Objects.equals(this.cirty, other.cirty)) {
-            return false;
-        }
-        if (!Objects.equals(this.state, other.state)) {
-            return false;
-        }
-        if (!Objects.equals(this.zio, other.zio)) {
-            return false;
-        }
-        if (!Objects.equals(this.houseNumber, other.houseNumber)) {
-            return false;
-        }
-        return true;
-    }
-
-
 }

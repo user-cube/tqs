@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package connection;
 
 import org.apache.http.HttpEntity;
@@ -14,7 +9,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-public class TqsBasicHttpClient implements ISimpleHttpClient {
+public class TqsHttpClient implements ISimpleHttpClient {
 
     @Override
     public String get(String url) throws IOException {
