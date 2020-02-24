@@ -33,7 +33,6 @@ public class AddressResolver {
             response = this.httpClient.get(uriBuilder.build().toString());
         } catch (Exception e){
             System.err.println(e);
-            System.exit(1);
         }
 
         // get parts from response till reaching the address

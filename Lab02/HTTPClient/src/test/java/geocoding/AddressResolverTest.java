@@ -23,7 +23,7 @@ public class AddressResolverTest {
     private TqsHttpClient tqsHttpClient;
 
     @Test
-    public void whenGoodCoordidates_returnAddress() throws URISyntaxException, ParseException, IOException {
+    public void whenGoodCoordinatesReturnAddress() throws URISyntaxException, ParseException, IOException {
         String simpleURL = "http://open.mapquestapi.com/geocoding/v1/reverse?key=uXSAVwYWbf9tJmsjEGHKKAo0gOjZfBLQ&location=40.633331%2C-8.659713&includeRoadMetadata=true";
         JSONObject jsonObject = null;
         JSONParser parser = new JSONParser();
@@ -50,7 +50,7 @@ public class AddressResolverTest {
     }
 
     @Test
-    public void whenBadCoordidates_trhowBadArrayindex() throws IOException{
+    public void whenBadCoordinatesThrowBadArraying() throws IOException{
         String simpleURL = "http://open.mapquestapi.com/geocoding/v1/reverse?key=uXSAVwYWbf9tJmsjEGHKKAo0gOjZfBLQ&location=40.633331%2C-8.659713&includeRoadMetadata=true";
         JSONObject jsonObject = null;
         JSONParser parser = new JSONParser();
