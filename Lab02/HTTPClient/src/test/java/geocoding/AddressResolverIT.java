@@ -22,6 +22,6 @@ public class AddressResolverIT {
     @Test
     public void whenBadCoordidates_trhowBadArrayindex(){
         AddressResolver resolver =new AddressResolver( new TqsBasicClient());
-        assertThrows(NullPointerException.class, () -> resolver.findAddressForLocation(40.6333310, -8.65971));
+        assertThrows(Exception.class, () -> resolver.findAddressForLocation(40.6333310, -8.65971));
     }
 }

@@ -33,7 +33,7 @@ public class AddressResolver {
             response = this.httpClient.get(uriBuilder.build().toString());
         } catch (Exception e){
             System.err.println(e);
-            throw new NullPointerException("Bad Array Index");
+            System.exit(1);
         }
 
         // get parts from response till reaching the address

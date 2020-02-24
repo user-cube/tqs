@@ -19,8 +19,6 @@ import java.net.URISyntaxException;
 
 @ExtendWith(MockitoExtension.class)
 public class AddressResolverTest {
-
-    private Address result;
     @Mock
     private TqsHttpClient tqsHttpClient;
 
@@ -40,7 +38,7 @@ public class AddressResolverTest {
         Mockito.when(tqsHttpClient.get(simpleURL)).thenReturn(jsonObject.toString());
         AddressResolver resolver = new AddressResolver(tqsHttpClient);
 
-        result = resolver.findAddressForLocation(40.6333308, -8.659713);
+        Address result = resolver.findAddressForLocation(40.6333308, -8.659713);
 
         assertEquals(result,
                 new Address(null,
@@ -67,7 +65,7 @@ public class AddressResolverTest {
         Mockito.when(tqsHttpClient.get(simpleURL)).thenReturn(jsonObject.toString());
         AddressResolver resolver = new AddressResolver(tqsHttpClient);
 
-        assertThrows(NullPointerException.class, () -> resolver.findAddressForLocation(40.6333310, -8.65971));
+        assertThrows(Exception.class, () -> resolver.findAddressForLocation(40.6333310, -8.65971));
     }
 
 }
