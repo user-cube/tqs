@@ -12,6 +12,7 @@ TQS labs and notes.
   * [Mocking dependencies in unit testing - Mockito](https://github.com/user-cube/tqs/tree/master/Lab02)
     + [Statement](https://github.com/user-cube/tqs/blob/master/Lab02/Enunciado.pdf)
     + [Stock Market](https://github.com/user-cube/tqs/tree/master/Lab02/StockMarket)
+    + [HTTP Client](https://github.com/user-cube/tqs/tree/master/Lab02/HTTPClient)
 
 ## Authors
 - [Rui Coelho](https://github.com/user-cube)

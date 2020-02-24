@@ -26,13 +26,7 @@ public class Main {
 
             Address result = resolver.findAddressForLocation( 40.6406609,-8.6566883);
 
-            System.out.println(
-                    "City: " + result.getCity() + "\n" +
-                            "House Number: " + result.getHouseNumber() + "\n" +
-                            "Road: " + result.getRoad() + "\n" +
-                            "State: " + result.getState() + "\n" +
-                            "Zip code: " + result.getZip()
-            );
+            System.out.println(result.toString());
         } catch (URISyntaxException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
