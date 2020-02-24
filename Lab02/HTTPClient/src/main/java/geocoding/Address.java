@@ -78,4 +78,15 @@ public class Address {
     public int hashCode() {
         return Objects.hash(road, city, state, zip, houseNumber);
     }
+
+    @Override
+    public String toString() {
+        return "Address {" +
+                "road='" + road + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", houseNumber='" + houseNumber + '\'' +
+                '}';
+    }
 }
