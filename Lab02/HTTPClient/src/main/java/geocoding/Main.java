@@ -27,11 +27,11 @@ public class Main {
             Address result = resolver.findAddressForLocation( 40.6406609,-8.6566883);
 
             System.out.println(
-                    result.getCity() + "\n" +
-                            result.getHouseNumber() + "\n" +
-                            result.getRoad() + "\n" +
-                            result.getState() + "\n" +
-                            result.getZip()
+                    "City: " + result.getCity() + "\n" +
+                            "House Number: " + result.getHouseNumber() + "\n" +
+                            "Road: " + result.getRoad() + "\n" +
+                            "State: " + result.getState() + "\n" +
+                            "Zip code: " + result.getZip()
             );
         } catch (URISyntaxException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
