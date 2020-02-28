@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.JavascriptExecutor;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,7 +18,6 @@ public class Ex1Test {
     @BeforeEach
     public void setUp() {
         driver = new ChromeDriver();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
     }
     @AfterEach
     public void tearDown() {
