@@ -15,6 +15,7 @@ TQS labs and notes.
     + [HTTP Client](https://github.com/user-cube/tqs/tree/master/Lab02/HTTPClient)
   * [Functional testing with web automation](https://github.com/user-cube/tqs/tree/master/Lab03)
     + [Web automation with Selenium IDE](https://github.com/user-cube/tqs/tree/master/Lab03/SeliniumIDE)
+    + [Selenium and Maven](https://github.com/user-cube/tqs/tree/master/Lab03/JUnityAndSelenium)
 
 ## Authors
 - [Rui Coelho](https://github.com/user-cube)
