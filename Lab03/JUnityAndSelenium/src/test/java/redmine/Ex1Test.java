@@ -1,3 +1,5 @@
+package redmine;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +13,7 @@ import java.util.List;
 
 public class Ex1Test {
     private WebDriver driver;
-    JavascriptExecutor js;
+    private JavascriptExecutor js;
 
     @BeforeEach
     public void setUp() {
