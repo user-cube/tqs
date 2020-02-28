@@ -11,15 +11,16 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.JavascriptExecutor;
 import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class Ex1Test {
   private WebDriver driver;
-  private JavascriptExecutor js;
   
   @Before
   public void setUp() {
     driver = new ChromeDriver();
-    js = (JavascriptExecutor) driver;
+    JavascriptExecutor js = (JavascriptExecutor) driver;
   }
   @After
   public void tearDown() {
@@ -34,6 +35,7 @@ public class Ex1Test {
     driver.findElement(By.id("password")).sendKeys("1234Abcd");
     driver.findElement(By.name("login")).click();
     driver.findElement(By.id("loggedas")).click();
+    assertEquals(driver.findElement(By.id("loggedas")).getText(), "Ligado como bananasecocos");
     driver.findElement(By.linkText("Sair")).click();
     {
       List<WebElement> elements = driver.findElements(By.linkText("Entrar"));

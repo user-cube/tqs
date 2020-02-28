@@ -15,12 +15,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Ex1Test {
     private WebDriver driver;
-    private JavascriptExecutor js;
 
     @BeforeEach
     public void setUp() {
         driver = new ChromeDriver();
-        js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
     }
     @AfterEach
     public void tearDown() {
