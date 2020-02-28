@@ -13,6 +13,9 @@ TQS labs and notes.
     + [Statement](https://github.com/user-cube/tqs/blob/master/Lab02/Enunciado.pdf)
     + [Stock Market](https://github.com/user-cube/tqs/tree/master/Lab02/StockMarket)
     + [HTTP Client](https://github.com/user-cube/tqs/tree/master/Lab02/HTTPClient)
+  * [Functional testing with web automation](https://github.com/user-cube/tqs/tree/master/Lab03)
+    + [Web automation with Selenium IDE](https://github.com/user-cube/tqs/tree/master/Lab03/SeliniumIDE)
+    + [Selenium and Maven](https://github.com/user-cube/tqs/tree/master/Lab03/JUnityAndSelenium)
 
 ## Authors
 - [Rui Coelho](https://github.com/user-cube)
