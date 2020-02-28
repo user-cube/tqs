@@ -24,7 +24,8 @@ import java.net.URL;
 
 public class Ex1Test {
   private WebDriver driver;
-  JavascriptExecutor js;
+  private JavascriptExecutor js;
+  
   @Before
   public void setUp() {
     driver = new ChromeDriver();
